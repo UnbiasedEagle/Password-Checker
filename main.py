@@ -33,4 +33,8 @@ def main(args):
         else:
             print("Your password have never been hacked")
 
-main(sys.argv[1:])
+with open("password.txt") as my_file:
+    password_list=[]
+    password=my_file.read()
+    check_password=password.splitlines()
+    main(check_password)
